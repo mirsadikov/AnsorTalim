@@ -79,12 +79,12 @@ function Yangiliklar() {
     <section className="section section-yangiliklar">
       <div className="section__head">
         <h2 className="heading--2">Yangiliklar</h2>
-        <a
+        <button
           onClick={() => setExpand((state) => !state)}
           className="btn--underlined"
         >
           {!expand ? "Barcha yangiliklar" : "Kamroq"}
-        </a>
+        </button>
       </div>
       <div className="section__body">
         {currentNews.map((item) => (

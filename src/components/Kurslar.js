@@ -70,12 +70,12 @@ function Kurslar() {
     <section className="section section-yangiliklar">
       <div className="section__head">
         <h2 className="heading--2">Kurslar</h2>
-        <a
+        <button
           onClick={() => setExpand((state) => !state)}
           className="btn--underlined"
         >
           {!expand ? "Barcha kurslar" : "Kamroq"}
-        </a>
+        </button>
       </div>
       <div className="section__body">
         {currentCourses.map((course) => (
