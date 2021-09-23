@@ -1,0 +1,27 @@
+body {
+  font-family: "Product Sans", sans-serif;
+  font-weight: 400;
+  font-size: 1.6rem;
+  line-height: 1.6;
+}
+
+.heading--1 {
+  font-size: 5.8rem;
+  font-weight: 700;
+  line-height: 7rem;
+  letter-spacing: 1.2px;
+}
+
+.body--2 {
+  color: var(--color-grey);
+  font-size: 1.9rem;
+  font-weight: 300;
+  line-height: 3.6rem;
+  letter-spacing: 0.5px;
+}
+
+.subtitle {
+  font-size: 1.9rem;
+  font-weight: 300; // original 400
+  letter-spacing: 0.3px;
+}
