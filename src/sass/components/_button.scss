@@ -1,3 +1,4 @@
+.btn,
 .btn:link,
 .btn:visited {
   display: inline-block;
@@ -10,12 +11,20 @@
   font-size: 1.9rem;
   background-color: var(--color-primary);
   color: var(--color-white);
-  transition: background-color 0.3s ease 0.3s, transform 0.3s ease;
+  transition: all 0.3s ease;
+  border: none;
 }
+
+.btn--block {
+  display: block;
+  width: 100%;
+  font-family: Product Sans;
+}
+
 .btn:hover,
 .btn:active {
-  background-color: var(--color-secondary);
-  transform: scale(1.05);
+  box-shadow: 0px 6px 12px 0px #113A6C4D;
+  // transform: scale(1.05);
 }
 
 .btn--underlined {

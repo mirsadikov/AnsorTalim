@@ -1,8 +1,12 @@
 .header {
-  display: grid;
-  grid-template-columns: 10% minmax(max-content, 120rem) 10%;
-  grid-template-rows: min-content;
-  justify-content: center;
+  // display: grid;
+  // grid-template-columns: 10% minmax(max-content, 120rem) 10%;
+  // grid-template-rows: min-content;
+  // justify-content: center;
+  width: 80%;
+  max-width: 120rem;
+  margin-right: auto;
+  margin-left: auto;
   background-blend-mode: multiply;
   background-size: cover;
   position: relative;
@@ -26,7 +30,7 @@
     background-repeat: no-repeat;
     position: absolute;
     bottom: 0.6rem;
-    right: 14rem;
+    right: 0.3rem;
   }
 }
 

@@ -2,54 +2,71 @@ import { useState, useEffect } from "react";
 
 const news = [
   {
+    id: 1,
     title: "Dasturchilik orqali million?",
     date: "12/06/2021",
     text: "Dasturchilik olamiga ilk kirib kelgan paytim 16 yosh bo’lganman va men....",
     img: "news1.png",
+    url: "#",
   },
   {
+    id: 2,
     title: "Qanday boshlash kerak?",
     date: "10/06/2021",
     text: "Dasturchilik olamiga ilk kirib kelgan paytim 16 yosh bo’lganman va men....",
     img: "news2.png",
+    url: "#",
   },
   {
+    id: 3,
     title: "FAANG kompaniyalari.",
     date: "09/06/2021",
     text: "Dasturchilik olamiga ilk kirib kelgan paytim 16 yosh bo’lganman va men....",
     img: "news3.png",
+    url: "#",
   },
   {
+    id: 4,
     title: "Qanday boshlash kerak?",
     date: "10/06/2021",
     text: "Dasturchilik olamiga ilk kirib kelgan paytim 16 yosh bo’lganman va men....",
     img: "news2.png",
+    url: "#",
   },
   {
+    id: 5,
     title: "FAANG kompaniyalari.",
     date: "09/06/2021",
     text: "Dasturchilik olamiga ilk kirib kelgan paytim 16 yosh bo’lganman va men....",
     img: "news3.png",
+    url: "#",
   },
   {
+    id: 6,
     title: "Dasturchilik orqali million?",
     date: "12/06/2021",
     text: "Dasturchilik olamiga ilk kirib kelgan paytim 16 yosh bo’lganman va men....",
     img: "news1.png",
+    url: "#",
   },
   {
+    id: 7,
     title: "FAANG kompaniyalari.",
     date: "09/06/2021",
     text: "Dasturchilik olamiga ilk kirib kelgan paytim 16 yosh bo’lganman va men....",
     img: "news3.png",
+    url: "#",
   },
   {
+    id: 8,
     title: "Qanday boshlash kerak?",
     date: "10/06/2021",
     text: "Dasturchilik olamiga ilk kirib kelgan paytim 16 yosh bo’lganman va men....",
     img: "news2.png",
+    url: "#",
   },
 ];
+
 function Yangiliklar() {
   const [expand, setExpand] = useState(false);
   const [currentNews, setCurrentNews] = useState([]);
@@ -71,7 +88,7 @@ function Yangiliklar() {
       </div>
       <div className="section__body">
         {currentNews.map((item) => (
-          <a href="#" className="news__card">
+          <a href={item.url} key={item.id} className="news__card">
             <figure className="news__card-figure">
               <img
                 src={`images/${item.img}`}
