@@ -1,7 +1,11 @@
 :root {
   --color-white: #ffffff;
   --color-grey: #f5f4f1;
-  --color-primary: #e44546;
+  --color-grey-text: #64696c;
+  --color-secondary: #e44546;
+  --color-primary-dark: #043353;
+  --color-primary: #113a6c;
+  --color-primary-light: #4f7398;
 }
 
 *,
@@ -21,8 +25,21 @@ html {
 body {
   box-sizing: border-box;
   overflow-x: hidden;
+  background: url("../../img/bg.svg"),
+    linear-gradient(
+      105.64deg,
+      rgba(255, 255, 255, 0.7) 0.77%,
+      rgba(255, 255, 255, 0.38) 31.86%,
+      rgba(255, 255, 255, 0.408269) 51.35%,
+      rgba(255, 255, 255, 0.6) 100%
+    );
+
+  background-position: top;
+  background-size: cover;
+  // backdrop-filter: blur(202px);
 
   &::-webkit-scrollbar {
+    display: none;
     width: 5px;
     background-color: var(--color-grey);
   }
@@ -30,5 +47,85 @@ body {
   &::-webkit-scrollbar-thumb {
     background-color: var(--color-primary);
     border-radius: 15px;
+  }
+}
+
+.main {
+  width: 80%;
+  margin: 0 auto;
+  min-height: 200rem;
+}
+
+.section {
+  margin-top: 9rem;
+
+  &__head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+    padding: 0 0.3rem;
+  }
+
+  &__body {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 3rem;
+    row-gap: 6rem;
+  }
+}
+
+.news__card {
+  text-decoration: none;
+
+  &-figure {
+    position: relative;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: 0.3s ease;
+
+    &:hover,
+    &:active {
+      transform: scale(1.05);
+    }
+  }
+
+  &-caption {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 50%, #000000 100%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    bottom: 0;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+  }
+
+  &-img {
+    width: 100%;
+    height: 24rem;
+    object-fit: cover;
+    display: block;
+    position: relative;
+  }
+
+  &-date {
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 1.7rem;
+    color: #cfcfcf;
+  }
+
+  &-title {
+    margin-top: 0.5rem;
+    font-weight: 700;
+    font-size: 1.9rem;
+    line-height: 2.3rem;
+    color: var(--color-white);
+    letter-spacing: 0.7px;
+  }
+  &-text {
+    margin-top: 2rem;
   }
 }

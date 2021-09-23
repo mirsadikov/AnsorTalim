@@ -1,12 +1,11 @@
 .header {
   display: grid;
-  grid-template-columns: 1fr minmax(max-content, 108.6rem) 1fr;
+  grid-template-columns: 10% minmax(max-content, 120rem) 10%;
   grid-template-rows: min-content;
-  background-image: linear-gradient(#043353, #043353), url("../../img/bg.jpg");
+  justify-content: center;
   background-blend-mode: multiply;
   background-size: cover;
   position: relative;
-  color: var(--color-white);
   height: 70.9rem;
 
   &__text {
@@ -14,15 +13,26 @@
 
     display: block;
     width: 50%;
+    padding: 0 0.3rem;
 
     position: absolute;
     top: 21.5rem;
+  }
+
+  &__img {
+    width: 528px;
+    height: 609px;
+    background-image: url("../../img/students.png");
+    background-repeat: no-repeat;
+    position: absolute;
+    bottom: 0.6rem;
+    right: 14rem;
   }
 }
 
 .nav {
   grid-column: 2 / 3;
-  padding-top: 2.1rem;
+  padding: 3rem 0.3rem 0;
   display: flex;
   align-items: center;
 
@@ -35,27 +45,29 @@
   }
 
   &__brand-logo {
-    height: 4.8rem;
-    width: 4.8rem;
-  }
-
-  &__brand-name {
-    margin-left: 1rem;
-    font-size: 2.7rem;
-    font-weight: 700;
+    height: 5.438rem;
   }
 
   &__list {
     display: flex;
-    gap: 4.5rem;
+    gap: 4rem;
     margin-left: auto;
     list-style: none;
   }
 
   &__link:link,
   &__link:visited {
-    color: inherit;
+    color: var(--color-primary-dark);
     text-decoration: none;
     display: block;
+    font-size: 1.9rem;
+    font-weight: 400;
+    line-height: 2.3rem;
+    letter-spacing: 0.1px;
+    transition: color 0.3s ease;
+  }
+  &__link:hover,
+  &__link:active {
+    color: var(--color-secondary);
   }
 }
