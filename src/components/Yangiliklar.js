@@ -76,7 +76,7 @@ function Yangiliklar() {
   }, [expand]);
 
   return (
-    <section className="section section-yangiliklar">
+    <section className="section section-news" id="yangiliklar">
       <div className="section__head">
         <h2 className="heading--2">Yangiliklar</h2>
         <button

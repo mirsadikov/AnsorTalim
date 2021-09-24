@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import Modal from "./Modal";
 
 const courses = [
   {
@@ -61,13 +62,22 @@ const courses = [
 function Kurslar() {
   const [expand, setExpand] = useState(false);
   const [currentCourses, setCurrentCourses] = useState([]);
+  const [modalIsOpen, setModalIsOpen] = useState(false);
 
   useEffect(() => {
     setCurrentCourses(expand ? courses : courses.slice(0, 3));
   }, [expand]);
 
+  const openModal = () => {
+    setModalIsOpen(true);
+  };
+
+  const hideModal = () => {
+    setModalIsOpen(false);
+  };
+
   return (
-    <section className="section section-yangiliklar">
+    <section className="section section-courses" id="kurslar">
       <div className="section__head">
         <h2 className="heading--2">Kurslar</h2>
         <button
@@ -97,13 +107,16 @@ function Kurslar() {
                   {course.tutor.name}
                 </p>
               </div>
-              <p className="courses__desc">{course.desc}</p>
+              <p className="courses__desc body--2--dark">{course.desc}</p>
               <h4 className="courses__price heading--4">{course.price} so‘m</h4>
-              <button className="btn btn--block">Sotib olish</button>
+              <button onClick={openModal} className="btn btn--block">
+                Sotib olish
+              </button>
             </figcaption>
           </figure>
         ))}
       </div>
+      {modalIsOpen ? <Modal hide={hideModal} /> : null}
     </section>
   );
 }
