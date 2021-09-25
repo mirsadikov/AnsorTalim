@@ -1,0 +1,61 @@
+import {
+  Location,
+  Phone,
+  OpenEnvelope,
+  TelegramFill,
+  FacebookFill,
+} from "akar-icons";
+
+import { Icon } from "@iconify/react";
+import circleinstagramIcon from "@iconify/icons-whh/circleinstagram";
+
+function Linklar() {
+  return (
+    <section className="section section-links">
+      <div className="section__head">
+        <h2 className="heading--2">Biz bilan bog‘lanish</h2>
+      </div>
+      <div className="section__body">
+        <div className="links__details">
+          <Location size={24} />
+          <p className="body--1">
+            Toshkent shaxri, Yunusobod tumani Shota Rustaveli ko‘chasi, 23-a uy
+          </p>
+          <Phone size={24} />
+          <p className="body--1">
+            <a href="tel:+998 90 123 45 67">+998 90 123 45 67</a>
+          </p>
+          <OpenEnvelope size={24} />
+          <p className="body--1">
+            <a href="mailto:ansortalim@gmail.com">ansortalim@gmail.com</a>
+          </p>
+        </div>
+        <p className="links__social-text">Bizning ijtimoiy tarmoqlar </p>
+        <div className="links__social-icons">
+          <a href="https://t.me/ansortalim">
+            <TelegramFill size={24} />
+          </a>
+          <a href="https://facebook.com/ansortalim">
+            <FacebookFill size={24} />
+          </a>
+          <a href="https://instagram.com/ansortalim">
+            <Icon icon={circleinstagramIcon} width="24" height="24" />
+          </a>
+        </div>
+      </div>
+      <div className="links__map">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d34227.20965696025!2d69.24494661618428!3d41.280904721393455!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x38ae8ae840b3dfaf%3A0xdc6aa358bbf04f06!2zMjMgU2hvdGEgUnVzdGF2ZWxpIGtvJ2NoYXNpLCDQotC-0YjQutC10L3RgiwgVXpiZWtpc3Rhbg!5e0!3m2!1sen!2s!4v1632507750165!5m2!1sen!2s"
+          // width="700"
+          // height="475"
+          style={{ border: 0 }}
+          allowFullScreen={false}
+          loading="lazy"
+          title="map"
+        ></iframe>
+      </div>
+    </section>
+  );
+}
+
+export default Linklar;

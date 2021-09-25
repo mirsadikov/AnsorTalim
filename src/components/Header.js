@@ -29,8 +29,8 @@ function Header() {
             </a>
           </li>
           <li>
-            <a href="#lavxalar" className="nav__link">
-              Darslardan lavxalar
+            <a href="#lavhalar" className="nav__link">
+              Darslardan lavhalar
             </a>
           </li>
           <li>
