@@ -116,7 +116,45 @@ function Kurslar() {
           </figure>
         ))}
       </div>
-      {modalIsOpen ? <Modal hide={hideModal} /> : null}
+      {modalIsOpen ? (
+        <Modal hide={hideModal}>
+          <div className="form-portal">
+          <form action="#" method="post">
+            <div className="form__group">
+              <label htmlFor="form-name">
+                <h5 className="heading--5 form__label">
+                  Ism va Familiyangizni kiriting: F.I.O.
+                </h5>
+              </label>
+              <input
+                type="text"
+                id="form-name"
+                placeholder="Bu yerga yozing"
+                className="form__input"
+                required
+              />
+            </div>
+
+            <div className="form__group">
+              <label htmlFor="form-contact">
+                <h5 className="heading--5 form__label">
+                  Telefon nomer yoki Emailingizni kiriting
+                </h5>
+              </label>
+              <input
+                type="text"
+                id="form-contact"
+                placeholder="Bu yerga yozing"
+                className="form__input"
+                required
+              />
+            </div>
+
+            <button className="btn form__btn">Sotib olish</button>
+          </form>
+          </div>
+        </Modal>
+      ) : null}
     </section>
   );
 }

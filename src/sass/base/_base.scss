@@ -179,6 +179,10 @@ body {
   }
 }
 
+.form-portal {
+  padding: 9rem 3rem;
+}
+
 ///////////////////////////////////////////
 // Tutors
 .section-tutors .section__body {
@@ -244,6 +248,43 @@ body {
     border-radius: 1rem;
     display: block;
     object-fit: cover;
+  }
+}
+
+.image-portal {
+  margin: 8rem 4rem 4rem;
+  position: relative;
+  max-width: 70vw;
+  // width: 80rem;
+
+  &__btn {
+    padding: 0 !important;
+    height: 5rem;
+    width: 5rem;
+    cursor: pointer;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+  }
+
+  &__prev {
+    left: 0rem;
+    transform: translate(-50%, -50%);
+  }
+
+  &__next {
+    right: 0rem;
+    transform: translate(50%, -50%);
+  }
+
+  &__img {
+    display: block;
+    height: 50rem;
+    width: 65vw;
+    max-height: 70vh;
+    object-fit: contain;
   }
 }
 ///////////////////////////////////////////

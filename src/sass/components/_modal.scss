@@ -9,13 +9,12 @@
 
 .modal {
   position: fixed;
-  top: 2rem;
+  top: 1vh;
   left: 50%;
   transform: translateX(-50%);
   animation: 0.3s fadein;
 
   background-color: var(--color-white);
-  padding: 9rem 3rem;
   box-shadow: 0px 4px 25px rgba(0, 0, 0, 0.4);
 
   &__close {

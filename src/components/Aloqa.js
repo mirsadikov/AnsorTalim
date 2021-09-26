@@ -17,6 +17,7 @@ function Aloqa() {
               id="form-name"
               placeholder="Bu yerga yozing"
               className="form__input"
+              required
             />
           </div>
 
@@ -31,6 +32,7 @@ function Aloqa() {
               id="form-contact"
               placeholder="Telefon / Email"
               className="form__input"
+              required
             />
           </div>
 
