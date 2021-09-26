@@ -40,7 +40,6 @@ function Aloqa() {
               allowEmptyFormatting={true}
               fixedDecimalScale={false}
               thousandsGroupStyle="thousand"
-              type="tel"
               displayType="input"
             />
           </div>
