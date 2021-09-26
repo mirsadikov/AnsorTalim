@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 import Modal from "./Modal";
 
 const courses = [
@@ -87,71 +88,75 @@ function Kurslar() {
           {!expand ? "Barcha kurslar" : "Kamroq"}
         </button>
       </div>
-      <div className="section__body">
+      <TransitionGroup className="section__body">
         {currentCourses.map((course) => (
-          <figure key={course.id} className="courses">
-            <img
-              src={`images/${course.img}`}
-              alt={course.title}
-              className="courses__img"
-            />
-            <figcaption className="courses__caption">
-              <h3 className="courses__title heading--3">{course.title}</h3>
-              <div className="courses__tutor">
-                <img
-                  src={`images/${course.tutor.img}`}
-                  className="courses__tutor-img"
-                  alt={course.tutor.name}
-                />
-                <p className="body--2 courses__tutor-name">
-                  {course.tutor.name}
-                </p>
-              </div>
-              <p className="courses__desc body--2--dark">{course.desc}</p>
-              <h4 className="courses__price heading--4">{course.price} so‘m</h4>
-              <button onClick={openModal} className="btn btn--block">
-                Sotib olish
-              </button>
-            </figcaption>
-          </figure>
+          <CSSTransition key={course.id} timeout={500} classNames="fade">
+            <figure className="courses">
+              <img
+                src={`images/${course.img}`}
+                alt={course.title}
+                className="courses__img"
+              />
+              <figcaption className="courses__caption">
+                <h3 className="courses__title heading--3">{course.title}</h3>
+                <div className="courses__tutor">
+                  <img
+                    src={`images/${course.tutor.img}`}
+                    className="courses__tutor-img"
+                    alt={course.tutor.name}
+                  />
+                  <p className="body--2 courses__tutor-name">
+                    {course.tutor.name}
+                  </p>
+                </div>
+                <p className="courses__desc body--2--dark">{course.desc}</p>
+                <h4 className="courses__price heading--4">
+                  {course.price} so‘m
+                </h4>
+                <button onClick={openModal} className="btn btn--block">
+                  Sotib olish
+                </button>
+              </figcaption>
+            </figure>
+          </CSSTransition>
         ))}
-      </div>
+      </TransitionGroup>
       {modalIsOpen ? (
         <Modal hide={hideModal}>
           <div className="form-portal">
-          <form action="#" method="post">
-            <div className="form__group">
-              <label htmlFor="form-name">
-                <h5 className="heading--5 form__label">
-                  Ism va Familiyangizni kiriting: F.I.O.
-                </h5>
-              </label>
-              <input
-                type="text"
-                id="form-name"
-                placeholder="Bu yerga yozing"
-                className="form__input"
-                required
-              />
-            </div>
+            <form action="#" method="post">
+              <div className="form__group">
+                <label htmlFor="form-name">
+                  <h5 className="heading--5 form__label">
+                    Ism va Familiyangizni kiriting: F.I.O.
+                  </h5>
+                </label>
+                <input
+                  type="text"
+                  id="form-name"
+                  placeholder="Bu yerga yozing"
+                  className="form__input"
+                  required
+                />
+              </div>
 
-            <div className="form__group">
-              <label htmlFor="form-contact">
-                <h5 className="heading--5 form__label">
-                  Telefon nomer yoki Emailingizni kiriting
-                </h5>
-              </label>
-              <input
-                type="text"
-                id="form-contact"
-                placeholder="Bu yerga yozing"
-                className="form__input"
-                required
-              />
-            </div>
+              <div className="form__group">
+                <label htmlFor="form-contact">
+                  <h5 className="heading--5 form__label">
+                    Telefon nomer yoki Emailingizni kiriting
+                  </h5>
+                </label>
+                <input
+                  type="text"
+                  id="form-contact"
+                  placeholder="Bu yerga yozing"
+                  className="form__input"
+                  required
+                />
+              </div>
 
-            <button className="btn form__btn">Sotib olish</button>
-          </form>
+              <button className="btn form__btn">Sotib olish</button>
+            </form>
           </div>
         </Modal>
       ) : null}

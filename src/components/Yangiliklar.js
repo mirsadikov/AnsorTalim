@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 const news = [
   {
@@ -86,24 +87,26 @@ function Yangiliklar() {
           {!expand ? "Barcha yangiliklar" : "Kamroq"}
         </button>
       </div>
-      <div className="section__body">
+      <TransitionGroup className="section__body">
         {currentNews.map((item) => (
-          <a href={item.url} key={item.id} className="news__card">
-            <figure className="news__card-figure">
-              <img
-                src={`images/${item.img}`}
-                alt={item.title}
-                className="news__card-img"
-              />
-              <figcaption className="news__card-caption">
-                <p className="news__card-date">{item.date}</p>
-                <h5 className="news__card-title">{item.title}</h5>
-              </figcaption>
-            </figure>
-            <p className="news__card-text body--2">{item.text}</p>
-          </a>
+          <CSSTransition key={item.id} timeout={500} classNames="fade">
+            <a href={item.url} className="news__card">
+              <figure className="news__card-figure">
+                <img
+                  src={`images/${item.img}`}
+                  alt={item.title}
+                  className="news__card-img"
+                />
+                <figcaption className="news__card-caption">
+                  <p className="news__card-date">{item.date}</p>
+                  <h5 className="news__card-title">{item.title}</h5>
+                </figcaption>
+              </figure>
+              <p className="news__card-text body--2">{item.text}</p>
+            </a>
+          </CSSTransition>
         ))}
-      </div>
+      </TransitionGroup>
     </section>
   );
 }
