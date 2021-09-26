@@ -1,11 +1,13 @@
-import logo from "../img/logo.svg";
-
 function Footer() {
   return (
     <div className="footer">
       <div className="footer__details">
         <a href="/" className="nav__brand">
-          <img src={logo} alt="Ansor Ta'lim Logo" className="nav__brand-logo" />
+          <img
+            src="images/logo-full.svg"
+            alt="Ansor Ta'lim Logo"
+            className="nav__brand-logo"
+          />
         </a>
         <p className="footer__text body--2">
           Dolor viverra in id bibendum sollicitudin viverra quam enim. Id lacus,

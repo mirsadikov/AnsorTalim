@@ -1,11 +1,13 @@
-import logo from "../img/logo.svg";
-
 function Header() {
   return (
     <header className="header">
       <nav className="nav">
         <a href="/" className="nav__brand">
-          <img src={logo} alt="Ansor Ta'lim Logo" className="nav__brand-logo" />
+          <img
+            src="images/logo-full.svg"
+            alt="Ansor Ta'lim Logo"
+            className="nav__brand-logo"
+          />
         </a>
         <ul className="nav__list">
           <li>
