@@ -18,14 +18,10 @@ function App() {
         <Ustozlar />
         <Izohlar />
         <Lavhalar />
-        <div className="full-container">
-          <Aloqa />
-        </div>
+        <Aloqa />
         <Linklar />
       </main>
-      <div className="full-container">
-        <Footer />
-      </div>
+      <Footer />
     </>
   );
 }

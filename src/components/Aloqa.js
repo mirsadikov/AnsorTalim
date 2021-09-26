@@ -1,3 +1,5 @@
+import NumberFormat from "react-number-format";
+
 function Aloqa() {
   return (
     <section className="section section-contact" id="aloqa">
@@ -24,15 +26,22 @@ function Aloqa() {
           <div className="form__group">
             <label htmlFor="form-contact">
               <h5 className="heading--5 form__label">
-                Telefon nomer yoki Emailingizni kiriting
+                Telefon nomeringizni kiriting
               </h5>
             </label>
-            <input
-              type="text"
-              id="form-contact"
-              placeholder="Telefon / Email"
-              className="form__input"
+            <NumberFormat
               required
+              type="tel"
+              id="form-contact"
+              placeholder="Bu yerga yozing"
+              className="form__input"
+              format="+988 (##) ###-##-##"
+              mask="_"
+              allowEmptyFormatting={true}
+              fixedDecimalScale={false}
+              thousandsGroupStyle="thousand"
+              type="tel"
+              displayType="input"
             />
           </div>
 

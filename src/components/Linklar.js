@@ -1,7 +1,7 @@
 import {
   Location,
   Phone,
-  OpenEnvelope,
+  Envelope,
   TelegramFill,
   FacebookFill,
 } from "akar-icons";
@@ -25,7 +25,7 @@ function Linklar() {
           <p className="body--1">
             <a href="tel:+998 90 123 45 67">+998 90 123 45 67</a>
           </p>
-          <OpenEnvelope size={24} />
+          <Envelope size={24} />
           <p className="body--1">
             <a href="mailto:ansortalim@gmail.com">ansortalim@gmail.com</a>
           </p>

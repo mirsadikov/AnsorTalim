@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 const news = [
@@ -71,19 +71,26 @@ const news = [
 function Yangiliklar() {
   const [expand, setExpand] = useState(false);
   const [currentNews, setCurrentNews] = useState([]);
+  const ref = useRef();
 
   useEffect(() => {
     setCurrentNews(expand ? news : news.slice(0, 3));
   }, [expand]);
 
+  const expandNews = () => {
+    if (expand) {
+      setExpand(false);
+    } else {
+      window.scrollTo({ behavior: "smooth", top: ref.current.offsetTop + 70 });
+      setExpand(true);
+    }
+  };
+
   return (
-    <section className="section section-news" id="yangiliklar">
+    <section className="section section-news" id="yangiliklar" ref={ref}>
       <div className="section__head">
         <h2 className="heading--2">Yangiliklar</h2>
-        <button
-          onClick={() => setExpand((state) => !state)}
-          className="btn--underlined"
-        >
+        <button onClick={expandNews} className="btn--underlined">
           {!expand ? "Barcha yangiliklar" : "Kamroq"}
         </button>
       </div>

@@ -1,5 +1,6 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { CSSTransition, TransitionGroup } from "react-transition-group";
+import NumberFormat from "react-number-format";
 import Modal from "./Modal";
 
 const courses = [
@@ -65,6 +66,8 @@ function Kurslar() {
   const [currentCourses, setCurrentCourses] = useState([]);
   const [modalIsOpen, setModalIsOpen] = useState(false);
 
+  const ref = useRef();
+
   useEffect(() => {
     setCurrentCourses(expand ? courses : courses.slice(0, 3));
   }, [expand]);
@@ -77,14 +80,20 @@ function Kurslar() {
     setModalIsOpen(false);
   };
 
+  const expandCourses = () => {
+    if (expand) {
+      setExpand(false);
+    } else {
+      window.scrollTo({ behavior: "smooth", top: ref.current.offsetTop + 70 });
+      setExpand(true);
+    }
+  };
+
   return (
-    <section className="section section-courses" id="kurslar">
+    <section className="section section-courses" id="kurslar" ref={ref}>
       <div className="section__head">
         <h2 className="heading--2">Kurslar</h2>
-        <button
-          onClick={() => setExpand((state) => !state)}
-          className="btn--underlined"
-        >
+        <button onClick={expandCourses} className="btn--underlined">
           {!expand ? "Barcha kurslar" : "Kamroq"}
         </button>
       </div>
@@ -143,15 +152,22 @@ function Kurslar() {
               <div className="form__group">
                 <label htmlFor="form-contact">
                   <h5 className="heading--5 form__label">
-                    Telefon nomer yoki Emailingizni kiriting
+                    Telefon nomeringizni kiriting
                   </h5>
                 </label>
-                <input
-                  type="text"
+                <NumberFormat
+                  required
+                  type="tel"
                   id="form-contact"
                   placeholder="Bu yerga yozing"
                   className="form__input"
-                  required
+                  format="+988 (##) ###-##-##"
+                  mask="_"
+                  allowEmptyFormatting={true}
+                  fixedDecimalScale={false}
+                  thousandsGroupStyle="thousand"
+                  type="tel"
+                  displayType="input"
                 />
               </div>
 

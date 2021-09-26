@@ -1,13 +1,21 @@
 .footer {
-  width: 80%;
-  max-width: 120rem;
+  grid-template-columns: minmax(5rem, 1fr) minmax(max-content, 109.2rem) minmax(
+      5rem,
+      1fr
+    );
   margin: 0 auto;
+  background-color: rgba(#ffffff, 0.4);
   padding: 9rem 0 8.2rem;
   display: grid;
-  grid-template-columns: 35% 1fr;
-  align-items: end;
-  justify-items: start;
-  grid-column-gap: 8.5rem;
+
+  &__container {
+    grid-column: 2 / 3;
+    grid-template-columns: 35% 1fr;
+    align-items: end;
+    justify-items: start;
+    grid-column-gap: 8.5rem;
+    display: grid;
+  }
 
   &__text {
     margin-top: 2rem;
