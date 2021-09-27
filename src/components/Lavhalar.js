@@ -58,7 +58,7 @@ const sliderSettings = {
   slidesPerRow: 1,
   arrows: false,
   autoplaySpeed: 3000,
-  autoplay: true,
+  // autoplay: true,
   dotsClass: "slider__dots",
   className: "slider",
 };

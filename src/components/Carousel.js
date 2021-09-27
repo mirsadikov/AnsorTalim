@@ -11,7 +11,7 @@ function Carousel({ children }) {
     slidesToScroll: 1,
     arrows: false,
     autoplaySpeed: 3000,
-    autoplay: true,
+    // autoplay: true,
     // centerMode: true,
     centerPadding: "0px",
     dotsClass: "slider__dots",
