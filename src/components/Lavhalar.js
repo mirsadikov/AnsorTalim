@@ -58,9 +58,18 @@ const sliderSettings = {
   slidesPerRow: 1,
   arrows: false,
   autoplaySpeed: 3000,
-  // autoplay: true,
+  autoplay: true,
   dotsClass: "slider__dots",
   className: "slider",
+  responsive: [
+    {
+      breakpoint: 800,
+      settings: {
+        slidesToShow: 2,
+        slidesToScroll: 1,
+      },
+    },
+  ],
 };
 
 function Lavhalar() {
@@ -138,11 +147,21 @@ function Lavhalar() {
       {imagePortalOpen ? (
         <Modal hide={onHide}>
           <div className="image-portal">
-            <button onClick={prevImg} className="image-portal__prev btn image-portal__btn">
+            <button
+              onClick={prevImg}
+              className="image-portal__prev btn image-portal__btn"
+            >
               <ChevronLeft size={24} />
             </button>
-            <img src={`images/${currentImageSrc}`} alt="Students" className="image-portal__img" />
-            <button onClick={nextImg} className="image-portal__next btn image-portal__btn">
+            <img
+              src={`images/${currentImageSrc}`}
+              alt="Students"
+              className="image-portal__img"
+            />
+            <button
+              onClick={nextImg}
+              className="image-portal__next btn image-portal__btn"
+            >
               <ChevronRight size={24} />
             </button>
           </div>

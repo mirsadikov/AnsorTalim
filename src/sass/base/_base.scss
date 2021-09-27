@@ -10,6 +10,10 @@
 $bp-largest: 75em; // 1200px / 16px
 $bp-large: 62.5em; // 1000px / 16px
 $bp-large-900: 56.25em; // 900px / 16px
+$bp-medium: 50em; // 800px / 16px
+$bp-small: 37.5em; // 600px / 16px
+$bp-smallest: 32.5em; // 600px / 16px
+// $bp-smallest: 27.5em; // 440px / 16px
 
 *,
 *::after,
@@ -35,18 +39,19 @@ html {
 body {
   box-sizing: border-box;
   overflow-x: hidden;
-  background: url("../../img/bg.svg"),
-    linear-gradient(
-      105.64deg,
-      rgba(255, 255, 255, 0.7) 0.77%,
-      rgba(255, 255, 255, 0.38) 31.86%,
-      rgba(255, 255, 255, 0.408269) 51.35%,
-      rgba(255, 255, 255, 0.6) 100%
-    );
+  // background: url("../../img/bg.svg"),
+  //   linear-gradient(
+  //     105.64deg,
+  //     rgba(255, 255, 255, 0.7) 0.77%,
+  //     rgba(255, 255, 255, 0.38) 31.86%,
+  //     rgba(255, 255, 255, 0.408269) 51.35%,
+  //     rgba(255, 255, 255, 0.6) 100%
+  //   );
 
-  background-position: top;
-  background-size: cover;
+  // background-position: top;
+  // background-size: cover;
   // backdrop-filter: blur(202px);
+  background-color: #efefef;
 
   &::-webkit-scrollbar {
     // display: none;
@@ -89,6 +94,27 @@ body {
         3.5rem,
         1fr
       );
+  }
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-columns: minmax(4rem, 1fr) minmax(auto, 67rem) minmax(
+        4rem,
+        1fr
+      );
+
+    // grid-template-columns: 1fr 85% 1fr;
+  }
+  @media only screen and (max-width: $bp-small) {
+    grid-template-columns: minmax(3rem, 1fr) minmax(auto, 59rem) minmax(
+        3rem,
+        1fr
+      );
+  }
+  @media only screen and (max-width: $bp-smallest) {
+    // grid-template-columns: minmax(4rem, 1fr) minmax(auto, 44.5rem) minmax(
+    //     4rem,
+    //     1fr
+    //   );
+    grid-template-columns: 1fr 85% 1fr;
   }
 
   &__head {
@@ -280,6 +306,10 @@ body {
         padding: 1rem;
         height: 24rem;
       }
+      @media only screen and (max-width: $bp-small) {
+        padding: 0.5rem;
+        height: 30vw;
+      }
 
       &::after {
         content: url("../../img/zoom.svg");
@@ -303,6 +333,12 @@ body {
           right: 1rem;
           left: 1rem;
         }
+        @media only screen and (max-width: $bp-small) {
+          top: 0.5rem;
+          bottom: 0.5rem;
+          right: 0.5rem;
+          left: 0.5rem;
+        }
       }
 
       &:hover::after {
@@ -320,6 +356,10 @@ body {
 
     @media only screen and (max-width: $bp-largest) {
       height: 22rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      height: calc(30vw - 1rem);
     }
   }
 }
@@ -384,6 +424,11 @@ body {
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 3rem;
 
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-columns: initial;
+    grid-row-gap: 2rem;
+  }
+
   .form__input {
     width: 100%;
     color: var(--color-primary-light);
@@ -427,6 +472,16 @@ body {
     minmax(5rem, 1fr);
   grid-template-rows: min-content 1fr;
   margin-top: 4.5rem;
+
+  @media only screen and (max-width: $bp-medium) {
+    // grid-template-columns:
+    //   minmax(5rem, 1fr) minmax(min-content, 56.3rem)
+    //   minmax(5rem, 1fr);
+    grid-template-columns: minmax(4rem, 1fr) minmax(auto, 67rem) minmax(
+        4rem,
+        1fr
+      );
+  }
 
   .section__head {
     grid-column: 2 / 3;
@@ -492,6 +547,13 @@ body {
     background-color: var(--color-grey);
     min-height: 47.5rem;
     height: 100%;
+
+    @media only screen and (max-width: $bp-medium) {
+      grid-row: 3 / 4;
+      grid-column: 1 / -1;
+      max-width: 100%;
+      min-height: 40rem;
+    }
 
     iframe {
       width: 100%;

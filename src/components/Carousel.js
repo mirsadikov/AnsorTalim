@@ -11,11 +11,27 @@ function Carousel({ children }) {
     slidesToScroll: 1,
     arrows: false,
     autoplaySpeed: 3000,
-    // autoplay: true,
+    autoplay: true,
     // centerMode: true,
     centerPadding: "0px",
     dotsClass: "slider__dots",
     className: "slider",
+    responsive: [
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 520,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
   };
 
   return <Slider {...sliderSettings}>{children}</Slider>;

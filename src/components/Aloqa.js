@@ -11,13 +11,13 @@ function Aloqa() {
           <div className="form__group">
             <label htmlFor="form-name">
               <h5 className="heading--5 form__label">
-                Ism va Familiyangizni kiriting: F.I.O.
+                Ism va Familiyangizni kiriting:
               </h5>
             </label>
             <input
               type="text"
               id="form-name"
-              placeholder="Bu yerga yozing"
+              placeholder="F.I.O."
               className="form__input"
               required
             />

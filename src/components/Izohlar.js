@@ -23,7 +23,7 @@ function Izohlar() {
       name: "Azam Muhammadyor",
       subject: "Viverra vehicula at.",
       history:
-        "Cursus odio dapibus mauris nibh. Ultricies non in commodo ornare tellus diam. Nunc mi non ac morbi magnis tincidunt.",
+        "Cursus odio dapibus mauris nibh. Ultricies non in commodo ornare tellus diam. Nunc mi non ac morbi magnis.",
       img: "student3.png",
     },
     {

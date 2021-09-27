@@ -81,7 +81,7 @@ function Yangiliklar() {
     if (expand) {
       setExpand(false);
     } else {
-      window.scrollTo({ behavior: "smooth", top: ref.current.offsetTop + 70 });
+      window.scrollTo({ behavior: "smooth", top: ref.current.offsetTop + 50 });
       setExpand(true);
     }
   };
