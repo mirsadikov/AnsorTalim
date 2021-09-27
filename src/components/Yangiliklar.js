@@ -109,6 +109,10 @@ function Yangiliklar() {
                   <h5 className="news__card-title">{item.title}</h5>
                 </figcaption>
               </figure>
+              <figcaption className="news__card-caption news__card-caption--mobile">
+                <p className="news__card-date">{item.date}</p>
+                <h5 className="news__card-title">{item.title}</h5>
+              </figcaption>
               <p className="news__card-text body--2">{item.text}</p>
             </a>
           </CSSTransition>

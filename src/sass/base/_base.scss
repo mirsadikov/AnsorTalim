@@ -111,6 +111,10 @@ body {
     align-items: center;
     margin-bottom: 3rem;
     padding: 0 0.3rem;
+
+     @media only screen and (max-width: $bp-small) {
+       margin-bottom: 4rem;
+    }
   }
 
   &__body {
@@ -129,14 +133,33 @@ body {
 
 ///////////////////////////////////////////
 // NEWS
+.section-news .section__body {
+  @media only screen and (max-width: $bp-small) {
+    grid-template-columns: auto;
+  }
+}
+
 .news__card {
   text-decoration: none;
+
+  @media only screen and (max-width: $bp-small) {
+    display: grid;
+    grid-template-columns: 35% 1fr;
+    grid-column-gap: 2.5rem;
+    grid-template-rows: auto auto;
+    position: relative;
+  }
 
   &-figure {
     position: relative;
     border-radius: 10px;
     overflow: hidden;
     transition: 0.3s ease;
+
+    @media only screen and (max-width: $bp-small) {
+      grid-row: 1 / -1;
+      position: static;
+    }
   }
 
   &-figure:hover > img,
@@ -159,6 +182,35 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+
+    @media only screen and (max-width: $bp-medium) {
+      padding: 1.5rem;
+      background: linear-gradient(180deg, rgba(0, 0, 0, 0) 40%, #000000 100%);
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      display: none;
+    }
+  }
+
+  &-caption--mobile {
+    display: none;
+    background: none;
+    padding: 0;
+    position: static;
+
+
+    .news__card-date {
+      color: var(--color-grey-text)
+    }
+    
+    .news__card-title {
+      color: var(--color-primary);
+    }
+    
+    @media only screen and (max-width: $bp-small) {
+      display: block;
+    }
   }
 
   &-img {
@@ -167,10 +219,11 @@ body {
     object-fit: cover;
     display: block;
     position: relative;
+    border-radius: 10px;
     transition: 0.3s ease;
 
     @media only screen and (max-width: $bp-large) {
-      height: 20rem;
+      height: 20vw;
     }
   }
 
@@ -179,6 +232,10 @@ body {
     font-size: 1.4rem;
     line-height: 1.7rem;
     color: #cfcfcf;
+
+    @media only screen and (max-width: $bp-small) {
+      color: var(--color-grey-text);
+    }
   }
 
   &-title {
@@ -189,9 +246,27 @@ body {
     color: var(--color-white);
     letter-spacing: 0.02em;
     transition: letter-spacing 0.3s ease;
+
+    @media only screen and (max-width: $bp-small) {
+      color: var(--color-primary);
+    }
   }
   &-text {
     margin-top: 2rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @media only screen and (max-width: $bp-medium) {
+      margin-top: 1rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      grid-row: 2 / -1;
+    }
   }
 }
 
@@ -285,7 +360,7 @@ body {
       left: 9rem;
     }
 
-     @media only screen and (max-width: $bp-small) {
+    @media only screen and (max-width: $bp-small) {
       position: initial;
     }
   }
