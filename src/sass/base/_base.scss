@@ -84,36 +84,23 @@ body {
 
   @media only screen and (max-width: $bp-largest) {
     margin: 7rem auto 0;
-    grid-template-columns: minmax(5rem, 1fr) minmax(auto, 101.1rem) minmax(
-        5rem,
-        1fr
-      );
+    // grid-template-columns: minmax(5rem, 1fr) minmax(auto, 101.1rem) minmax(5rem, 1fr);
+    grid-template-columns: 1fr 90% 1fr;
   }
-  @media only screen and (max-width: $bp-large-900) {
-    grid-template-columns: minmax(3.5rem, 1fr) minmax(auto, 92rem) minmax(
-        3.5rem,
-        1fr
-      );
-  }
-  @media only screen and (max-width: $bp-medium) {
-    grid-template-columns: minmax(4rem, 1fr) minmax(auto, 67rem) minmax(
-        4rem,
-        1fr
-      );
 
-    // grid-template-columns: 1fr 85% 1fr;
+  // @media only screen and (max-width: $bp-large-900) {
+  // grid-template-columns: minmax(3.5rem, 1fr) minmax(auto, 92rem) minmax(3.5rem, 1fr);
+  // }
+
+  @media only screen and (max-width: $bp-medium) {
+    // grid-template-columns: minmax(4rem, 1fr) minmax(auto, 67rem) minmax(4rem, 1fr);
+    // grid-template-columns: 1fr 90% 1fr;
   }
-  @media only screen and (max-width: $bp-small) {
-    grid-template-columns: minmax(3rem, 1fr) minmax(auto, 59rem) minmax(
-        3rem,
-        1fr
-      );
-  }
+  // @media only screen and (max-width: $bp-small) {
+  //   grid-template-columns: minmax(3rem, 1fr) minmax(auto, 59rem) minmax(3rem, 1fr);
+  // }
   @media only screen and (max-width: $bp-smallest) {
-    // grid-template-columns: minmax(4rem, 1fr) minmax(auto, 44.5rem) minmax(
-    //     4rem,
-    //     1fr
-    //   );
+    // grid-template-columns: minmax(4rem, 1fr) minmax(auto, 44.5rem) minmax(4rem, 1fr);
     grid-template-columns: 1fr 85% 1fr;
   }
 
@@ -210,16 +197,48 @@ body {
 
 ///////////////////////////////////////////
 // COURSES
+.section-courses .section__body {
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-columns: auto;
+    grid-row-gap: 2rem;
+  }
+}
+
 .courses {
   background-color: var(--color-white);
   border-radius: 10px;
   overflow: hidden;
   box-shadow: 0px 8px 16px 0px #00000000;
+  position: relative;
+
+  @media only screen and (min-width: $bp-small) and (max-width: $bp-medium) {
+    display: grid;
+    grid-template-columns: minmax(auto, 30rem) 1fr;
+    padding: 2rem;
+  }
+
+  @media only screen and (max-width: $bp-small) {
+    max-width: 40rem;
+    margin: 0 auto;
+    display: block;
+    padding: 0;
+  }
 
   &__img {
     height: 22rem;
     width: 100%;
     object-fit: cover;
+
+    @media only screen and (min-width: $bp-small) and (max-width: $bp-medium) {
+      height: 80%;
+      border-radius: 10px;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      height: 22rem;
+      width: 100%;
+      border-radius: 0;
+    }
   }
 
   &__caption {
@@ -229,6 +248,14 @@ body {
 
     @media only screen and (max-width: $bp-largest) {
       padding: 1rem 2rem 3rem;
+    }
+
+    @media only screen and (min-width: $bp-small) and (max-width: $bp-medium) {
+      padding: 0 2rem 0.5rem 4rem;
+    }
+
+    @media only screen and (max-width: $bp-small) {
+      padding: 1rem 3rem 3rem;
     }
   }
 
@@ -251,6 +278,16 @@ body {
 
   &__price {
     margin-bottom: 0.5rem;
+
+    @media only screen and (min-width: $bp-small) and (max-width: $bp-medium) {
+      position: absolute;
+      bottom: 1.5rem;
+      left: 9rem;
+    }
+
+     @media only screen and (max-width: $bp-small) {
+      position: initial;
+    }
   }
 }
 
@@ -265,6 +302,10 @@ body {
 
   .slider {
     margin: 0 -1.5rem;
+
+    @media only screen and (max-width: $bp-largest) {
+      margin: 0 -1rem;
+    }
   }
 }
 
@@ -275,6 +316,10 @@ body {
 
   .slider {
     margin: 0 -1.5rem;
+
+    @media only screen and (max-width: $bp-largest) {
+      margin: 0 -1rem;
+    }
   }
 }
 
@@ -293,8 +338,16 @@ body {
   .slider {
     margin: 0 -1.5rem;
 
+    @media only screen and (max-width: $bp-largest) {
+      margin: 0 -0.5rem;
+    }
+
     .slick-list {
       margin: -1.5rem 0;
+
+      @media only screen and (max-width: $bp-largest) {
+        margin: -0.5rem 0;
+      }
     }
 
     .slick-slide > div {
