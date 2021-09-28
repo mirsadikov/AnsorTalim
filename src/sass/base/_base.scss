@@ -38,7 +38,8 @@ html {
 
 body {
   box-sizing: border-box;
-  overflow-x: hidden;
+  overflow: hidden;
+
   background: url("../../img/bg.svg"), #f5f4f1;
   // background: linear-gradient(
   //   105.64deg,
@@ -563,6 +564,7 @@ body {
   background-color: rgba(#ffffff, 0.4);
   margin: 0 auto;
   padding: 4.5rem 0;
+  position: relative;
 }
 
 .section-contact .section__body {
@@ -609,6 +611,10 @@ body {
 
 ///////////////////////////////////////////
 // Links
+
+.section-links {
+  position: relative;
+}
 .section-links .section__body {
   display: block;
   // padding-right: 9rem;

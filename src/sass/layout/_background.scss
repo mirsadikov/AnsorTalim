@@ -1,0 +1,97 @@
+.background {
+  filter: blur(150px);
+  position: relative;
+  z-index: -1;
+
+}
+
+.rect1 {
+  position: absolute;
+  width: 255px;
+  height: 953px;
+  left: 35%;
+  top: -127px;
+  background: #8f00ff;
+  opacity: 0.4;
+  transform: rotate(30deg);
+}
+
+.rect2 {
+  position: absolute;
+  width: 611px;
+  height: 611px;
+  left: -89px;
+  top: -79px;
+  opacity: 0.4;
+  background: #46bee4;
+}
+
+.ellip1 {
+  position: absolute;
+  width: 729px;
+  height: 703px;
+  left: 736px;
+  top: 160px;
+  background: #7cd238;
+  opacity: 0.4;
+}
+
+.ellip2 {
+  position: absolute;
+  width: 1265px;
+  height: 1219px;
+  left: -807px;
+  top: 965px;
+  background: #7cd238;
+  opacity: 0.25;
+}
+
+.ellip3 {
+  position: absolute;
+  width: 1265px;
+  height: 1219px;
+  left: 560px;
+  top: 1853px;
+  background: #8f00ff;
+  opacity: 0.1;
+}
+
+.ellip4 {
+  position: absolute;
+  width: 1265px;
+  height: 1219px;
+  left: -729px;
+  top: 3072px;
+  background-color: #043353;
+  opacity: 0.07;
+}
+
+.ellip5 {
+  position: absolute;
+  width: 1265px;
+  height: 1219px;
+  left: 698px;
+  top: 3703px;
+  background: #7cd238;
+  opacity: 0.25;
+}
+
+.ellip6 {
+  position: absolute;
+  width: 691px;
+  height: 665px;
+  left: -297px;
+  top: 4879px;
+  background: #8f00ff;
+  opacity: 0.1;
+}
+
+.ellip7 {
+  position: absolute;
+  width: 585px;
+  height: 563px;
+  left: 666px;
+  top: 5088px;
+  background: #e54647;
+  opacity: 0.25;
+}
