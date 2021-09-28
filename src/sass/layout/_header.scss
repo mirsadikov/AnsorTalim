@@ -15,12 +15,33 @@
   @media only screen and (max-width: $bp-large) {
     height: 67rem;
   }
+  @media only screen and (max-width: $bp-medium) {
+    height: auto;
+  }
+  @media only screen and (max-width: $bp-small) {
+    grid-template-columns: 1fr 90% 1fr;
+  }
+  @media only screen and (max-width: $bp-smallest) {
+    grid-template-columns: 2.4rem 1fr 2.4rem;
+  }
 
   &__container {
     grid-column: 2 / 3;
     display: grid;
     grid-template-columns: max-content 1fr;
     grid-template-rows: auto auto;
+    padding: 3rem 0.3rem 0;
+
+    @media only screen and (max-width: $bp-medium) {
+      justify-items: center;
+    }
+  }
+
+  & .nav .nav__link {
+    @media only screen and (max-width: $bp-medium) {
+      font-size: 2.5rem;
+      display: inline-block;
+    }
   }
 
   &__text {
@@ -31,6 +52,24 @@
     padding: 0 0.3rem;
     position: absolute;
     top: 21.5rem;
+
+    @media only screen and (max-width: $bp-medium) {
+      position: static;
+      grid-row: 3 / 4;
+      grid-column: 1 / -1;
+    }
+    @media only screen and (max-width: $bp-small) {
+      width: 90%;
+      max-width: 40rem;
+    }
+  }
+  &__subtitle {
+    margin-bottom: 4rem;
+    @media only screen and (max-width: $bp-medium) {
+      margin-bottom: 2rem;
+      font-size: 1.6rem;
+      line-height: 2.5rem;
+    }
   }
 
   &__img {
@@ -52,14 +91,56 @@
       width: 40rem;
       height: 46.1rem;
     }
+
+    @media only screen and (max-width: $bp-medium) {
+      position: static;
+      grid-row: 2 /3;
+      grid-column: 1 / -1;
+      height: 36.9vh;
+      width: 32vh;
+    }
+    @media only screen and (max-width: $bp-medium) {
+      margin-top: 5rem;
+      margin-bottom: -4rem;
+    }
   }
 }
 
 .nav {
-  grid-column: 1 / 3;
-  padding: 3rem 0.3rem 0;
+  grid-column: 2 / 3;
   display: flex;
   align-items: center;
+  justify-content: flex-end;
+
+  @media only screen and (max-width: $bp-medium) {
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: #f5f4f1;
+    width: 100vw;
+    height: 100vh;
+    max-height: -webkit-fill-available;
+    z-index: 999;
+    justify-content: center;
+  }
+
+  &__btn {
+    justify-self: end;
+    top: 2.8rem;
+    align-self: center;
+    z-index: 9999;
+    padding: 0 !important;
+    height: 6rem;
+    width: 6rem;
+    position: fixed;
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &__icon {
+    display: inine-block;
+  }
 
   &__brand {
     display: flex;
@@ -76,8 +157,12 @@
   &__list {
     display: flex;
     gap: 4rem;
-    margin-left: auto;
     list-style: none;
+
+    @media only screen and (max-width: $bp-medium) {
+      flex-direction: column;
+      text-align: center;
+    }
   }
 
   &__link:link,
@@ -91,6 +176,7 @@
     letter-spacing: 0.1px;
     transition: color 0.3s ease;
   }
+
   &__link:hover,
   &__link:active {
     color: var(--color-secondary);

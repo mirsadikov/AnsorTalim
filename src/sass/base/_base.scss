@@ -12,8 +12,8 @@ $bp-large: 62.5em; // 1000px / 16px
 $bp-large-900: 56.25em; // 900px / 16px
 $bp-medium: 50em; // 800px / 16px
 $bp-small: 37.5em; // 600px / 16px
-$bp-smallest: 32.5em; // 600px / 16px
-// $bp-smallest: 27.5em; // 440px / 16px
+$bp-smallest: 32.5em; // 520px / 16px
+$bp-extra-small: 21em; // 336px / 16px
 
 *,
 *::after,
@@ -39,19 +39,18 @@ html {
 body {
   box-sizing: border-box;
   overflow-x: hidden;
-  // background: url("../../img/bg.svg"),
-  //   linear-gradient(
-  //     105.64deg,
-  //     rgba(255, 255, 255, 0.7) 0.77%,
-  //     rgba(255, 255, 255, 0.38) 31.86%,
-  //     rgba(255, 255, 255, 0.408269) 51.35%,
-  //     rgba(255, 255, 255, 0.6) 100%
-  //   );
+  background: url("../../img/bg.svg"), #f5f4f1;
+  // background: linear-gradient(
+  //   105.64deg,
+  //   rgba(255, 255, 255, 0.7) 0.77%,
+  //   rgba(255, 255, 255, 0.38) 31.86%,
+  //   rgba(255, 255, 255, 0.408269) 51.35%,
+  //   rgba(255, 255, 255, 0.6) 100%
+  // );
 
   // background-position: top;
-  // background-size: cover;
-  // backdrop-filter: blur(202px);
-  background-color: #efefef;
+  background-size: cover;
+  background: #f5f4f1;
 
   &::-webkit-scrollbar {
     // display: none;
@@ -92,10 +91,10 @@ body {
   // grid-template-columns: minmax(3.5rem, 1fr) minmax(auto, 92rem) minmax(3.5rem, 1fr);
   // }
 
-  @media only screen and (max-width: $bp-medium) {
-    // grid-template-columns: minmax(4rem, 1fr) minmax(auto, 67rem) minmax(4rem, 1fr);
-    // grid-template-columns: 1fr 90% 1fr;
-  }
+  // @media only screen and (max-width: $bp-medium) {
+  // grid-template-columns: minmax(4rem, 1fr) minmax(auto, 67rem) minmax(4rem, 1fr);
+  // grid-template-columns: 1fr 90% 1fr;
+  // }
   // @media only screen and (max-width: $bp-small) {
   //   grid-template-columns: minmax(3rem, 1fr) minmax(auto, 59rem) minmax(3rem, 1fr);
   // }
@@ -371,7 +370,7 @@ body {
     justify-self: center;
     align-self: end;
     margin-bottom: 0;
-    
+
     @media only screen and (min-width: $bp-small) and (max-width: $bp-medium) {
       display: block;
     }
