@@ -513,6 +513,10 @@ body {
   max-width: 70vw;
   // width: 80rem;
 
+  @media only screen and (max-width: $bp-smallest) {
+    max-width: 95vw;
+  }
+
   &__btn {
     padding: 0 !important;
     height: 5rem;
@@ -541,6 +545,9 @@ body {
     width: 65vw;
     max-height: 70vh;
     object-fit: contain;
+    @media only screen and (max-width: $bp-smallest) {
+      width: 80vw;
+    }
   }
 }
 ///////////////////////////////////////////

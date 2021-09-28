@@ -31,6 +31,10 @@
     &:focus {
       color: var(--color-primary);
     }
+
+    @media only screen and (max-width: $bp-smallest) {
+      width: 85vw;
+    }
   }
 
   &__btn {

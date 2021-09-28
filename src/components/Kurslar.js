@@ -106,7 +106,9 @@ function Kurslar() {
                 alt={course.title}
                 className="courses__img"
               />
-              <h4 className="courses__price courses__price-tablet heading--4">{course.price} so‘m</h4>
+              <h4 className="courses__price courses__price-tablet heading--4">
+                {course.price} so‘m
+              </h4>
               <figcaption className="courses__caption">
                 <h3 className="courses__title heading--3">{course.title}</h3>
                 <div className="courses__tutor">
@@ -138,13 +140,13 @@ function Kurslar() {
               <div className="form__group">
                 <label htmlFor="form-name">
                   <h5 className="heading--5 form__label">
-                    Ism va Familiyangizni kiriting: F.I.O.
+                    Ism va Familiyangizni kiriting:
                   </h5>
                 </label>
                 <input
                   type="text"
                   id="form-name"
-                  placeholder="Bu yerga yozing"
+                  placeholder="F.I.O"
                   className="form__input"
                   required
                 />
