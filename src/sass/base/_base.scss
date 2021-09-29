@@ -384,6 +384,8 @@ body {
 
 .form-portal {
   padding: 9rem 3rem;
+  overflow: auto;
+  max-height: 100vh;
 }
 
 ///////////////////////////////////////////
