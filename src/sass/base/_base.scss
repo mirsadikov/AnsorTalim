@@ -40,7 +40,7 @@ body {
   box-sizing: border-box;
   overflow: hidden;
 
-  background: url("../../img/bg.svg"), #f5f4f1;
+  background: url("../../img/bg.webp"), #f5f4f1;
   // background: linear-gradient(
   //   105.64deg,
   //   rgba(255, 255, 255, 0.7) 0.77%,
@@ -49,9 +49,9 @@ body {
   //   rgba(255, 255, 255, 0.6) 100%
   // );
 
-  // background-position: top;
+  background-position: 40% top;
   background-size: cover;
-  background: #f5f4f1;
+  // background: #f5f4f1;
 
   &::-webkit-scrollbar {
     // display: none;

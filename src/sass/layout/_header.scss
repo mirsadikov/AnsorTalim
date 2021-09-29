@@ -111,6 +111,8 @@
   display: flex;
   align-items: center;
   justify-content: flex-end;
+  padding: 5rem;
+  overflow: scroll;
 
   @media only screen and (max-width: $bp-medium) {
     position: fixed;
@@ -158,6 +160,7 @@
     display: flex;
     gap: 4rem;
     list-style: none;
+    margin: auto;
 
     @media only screen and (max-width: $bp-medium) {
       flex-direction: column;

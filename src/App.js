@@ -12,7 +12,7 @@ import Background from "./components/Background";
 function App() {
   return (
     <>
-      <Background />
+      {/* <Background /> */}
       <Header />
       <main className="main">
         <Yangiliklar />
