@@ -7,12 +7,10 @@ import Lavhalar from "./components/Lavhalar";
 import Aloqa from "./components/Aloqa";
 import Linklar from "./components/Linklar";
 import Footer from "./components/Footer";
-// import Background from "./components/Background";
 
 function App() {
   return (
     <>
-      {/* <Background /> */}
       <Header />
       <main className="main">
         <Yangiliklar />
